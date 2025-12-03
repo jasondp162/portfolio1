@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jasond perez— Portfolio</title>
+  <style>
+    :root{
+      --accent:#2563eb;
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+
+	.hero{
+		position:relative;
+		height: 90vh;
+		backgroud: url('images/jay.jpg') center/cover no-repeat;
+		display:flex;
+		justify-content:center;
+		align-items: center;
+		}
+		
+    body{
+      margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,#071029 0%, #071422 60%); color:#e6eef8; -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+    }
+    .wrap{max-width:var(--maxw);margin:32px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+    nav a:hover{color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px;align-items:center}
+    .card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+
+    .intro h1{margin:0;font-size:28px}
+    .intro p{color:var(--muted);margin-top:12px}
+    .cta{margin-top:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+
+    .profile-pic{width:100%;border-radius:12px;overflow:hidden}
+    .profile-pic img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .section{margin-top:22px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg,var(--glass),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .project h3{margin:0 0 8px 0}
+    .muted{color:var(--muted);font-size:14px}
+
+    footer{margin-top:40px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .grid{grid-template-columns:1fr}
+      nav a{margin-left:10px}
+      .logo{width:48px;height:48px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">jay</div>
+        <div>
+          <div style="font-weight:700">PEREZ JASOND</div>
+          <div class="muted" style="font-size:13px"> Designer • Problem solver</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">私について</a>
+        <a href="#projects">履歴書</a>
+        <a href="#skills">スキール</a>
+        <a href="#contact">連絡先</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="intro card">
+        <h1>Hi — I’m <span style="color:var(--accent)">JASOND</span></h1>
+        <p class="muted">業務改善や効率化に強い関心があり、実用的な解決策を提案することを得意としています。責任を持って最後までやり遂げることを大切にしています。どうぞよろしくお願いいたします。</p>
+        <div class="cta">
+          <a class="btn" href="#projects">履歴書</a>
+          <a href="#contact" style="margin-left:12px;color:var(--muted);text-decoration:none">連絡先 →</a>
+        </div>
+
+        <div class="section" id="about">
+          <h2 style="margin:0 0 8px 0">私について</h2>
+          <p class="muted">私は、状況を的確に観察し、必要な場面で落ち着いて行動することを大切にします。
+			  Cebuano・Tagalog・English・日本語を使い分けながら、多言語でのコミュニケーションを行うことで
+			  円滑な調整や相互理解の促進に貢献できます。</p>
+		  <p class="muted">穏やかさとせいじつさを大切にし、関わる人に安心を与えられることが私の強みです。
+			  チームや環境に自然と馴染み、信頼関係を築きながらサポートしていきます。</p>Multilingual data specialist based in Chiba, Japan, with 11 years of cross-cultural experience. Skilled in practical data management and Excel automation, with a methodical approach to solving technical challenges. Fluent in Bisaya, Tagalog, English, and Japanese, enabling effective collaboration across diverse teams. Known for precision, persistence, and a commitment to building efficient, reliable systems.
+</p>
+        </div>
+
+        <div class="section" id="skills">
+          <h3 style="margin:0 0 8px 0">スキール</h3>
+          <div class="muted">
+顧客対応力 / クライアントコミュニケーション
+
+多言語対応（英語・日本語・タガログ語・ビサヤ語）
+
+問題解決力 / 状況判断力
+
+業務効率化・改善提案力</div>
+        </div>
+      </div>
+
+      <aside class="card profile-pic">
+        <!-- Replace the image src with your photo or a placeholder -->
+        <img src="images/jay.jpg" alt="Profile">
+        <div style="padding:12px">
+          <div style="font-weight:700">Location</div>
+          <div class="muted">Chiba, Japan</div>
+        </div>
+      </aside>
+    </main>
+
+    <section class="section card" id="projects">
+      <h2 style="margin-top:0">履歴書・経歴書　選択</h2>
+      <div class="grid" style="margin-top:12px">
+        <div class="project">
+          <h3>Project A</h3>
+          <div class="muted">Short description. Tech: React • Netlify</div>
+          <div style="margin-top:8px"><a href="#" style="text-decoration:none;color:var(--accent)">View live</a> • <a href="#" style="text-decoration:none;color:var(--muted)">Source</a></div>
+        </div>
+
+        <div class="project">
+          <h3>Project B</h3>
+          <div class="muted">Short description. Tech: HTML • CSS • JS</div>
+          <div style="margin-top:8px"><file src:file/resume.pdf/>
+	    </a> • <a href="#" style="text-decoration:none;color:var(--muted)">Source</a></div>
+        </div>
+
+        <div class="project">
+          <h3>Project C</h3>
+          <div class="muted">Short description. Tech: TypeScript • Vite</div>
+          <div style="margin-top:8px"><a href="#" style="text-decoration:none;color:var(--accent)">View live</a> • <a href="#" style="text-decoration:none;color:var(--muted)">Source</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card" id="contact">
+      <h2 style="margin-top:0">連絡先</h2>
+      <p class="muted">ご不明点がございましたら、ご遠慮なくお問い合わせください。通常、数日以内にご返答いたします。</p>
+        <p>
+  <span style="font-size:15px; color:#777;">住所: </span>
+  <span style="font-size:18px; font-weight:bold;">千葉県袖ケ浦市福王台３−３３−１−９</span>
+</p>
+
+<p>
+  <span style="font-size:15px; color:#777;">電話番号: </span>
+  <span style="font-size:18px;">(+81)70-4292-5407</span>
+</p>
+
+<p>
+  <span style="font-size:15px; color:#777;">E-mail: </span>
+  <span style="font-size:18px;">jasondp663@gmail.com</span>
+</p>
+
+
+
+
+	<form action="https://formsubmit.co/jasondp663@gmail.com" method="POST">
+        	<div style="display:flex;gap:8px;flex-wrap:wrap">
+          	<input type="text" name="name" placeholder="Your name" style="flex:1;padding:10px;border-radius:8px;border:1px solid 				rgba(255,255,255,0.04);background:transparent;color:inherit">
+          <input type="email" name="email" placeholder="Your email" style="flex:1;padding:10px;border-radius:8px;border:1px solid 				rgba(255,255,255,0.04);background:transparent;color:inherit">
+        </div>
+        	<textarea name="message" placeholder="Message" rows="4" style="width:100%;margin-top:10px;padding:10px;border-					radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+        <div style="margin-top:10px"><button type="submit" class="btn">Send</button></div>
+     
+	 </form>
+
+
+      
+    </section>
+
+    <footer>
+      © <span id="year"></span> JASOND PEREZ — <span class="muted">Built with HTML & CSS</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
